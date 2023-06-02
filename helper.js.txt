@@ -1,0 +1,5 @@
+"use strict"
+alert('hello');
+console.log('hello');
+prompt('Вопрос', '123');
+typeof(prompt)
