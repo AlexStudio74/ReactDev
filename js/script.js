@@ -1,9 +1,6 @@
 "use strict";
 
-//alert('жопа');
-
 const NumberOfFilms = +prompt("Сколько фильмов вы посмотрели?", " ");
-
 const personalMoveDB = {
     count: NumberOfFilms,
     movies: {},
@@ -12,12 +9,19 @@ const personalMoveDB = {
     privat: false
 };
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = prompt('Оцените его из 10', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = prompt('Оцените его из 10', '');
+for(let i=0; i<2; i++){
+    let a = prompt('Один из последних просмотренных фильмов?', ""),
+    b = prompt('Оцените его из 10', "");
+    
+    if(a != null && b != null && a != "" && b != "" && a.length < 50 && b <= 10){
+        personalMoveDB.movies[a] = b;
+        alert('УДАЧНО!');
+    }else{
+        alert('Ответ не правильный');
+        i--;
+    }
 
-personalMoveDB.movies[a] = b;
-personalMoveDB.movies[c] = d;
+    
+};
 
 console.log(personalMoveDB);
