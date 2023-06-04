@@ -1,25 +1,35 @@
 "use strict";
 
-function first(){
-    setTimeout(function(){
-        console.log(1);
-    }, 500);
-}
-
-function second(){
-    console.log(2);
-}
-
-first();
-second();
+const options = {
+    name: "test",
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    }
+};
 
 
-function learnJS(lang, callback){
-    console.log(`Я учу: ${lang}`);
-    callback();
-}
+const {border, bg} = options.colors;
 
-learnJS('JavaScript', function(){
-    console.log("Я прошёл этот урок")
-});
+//delete options.name;
+//
+//let counter = 0;
+//
+//
+//for(let key in options){
+//    if(typeof(options[key]) === 'object'){
+//        for(let i in options[key]){
+//            console.log(`Свойство ${key}/${i} имеет значение ${options[key][i]}`);
+//            counter++;
+//        }
+//    }else{
+//        console.log(`Свойство ${key} имеет значение ${options[key]}`);
+//        counter++;
+//    }
+//    
+//};
+//
+//console.log(`Переменная ${"options"} имеет в себе ${counter} значений`);
 

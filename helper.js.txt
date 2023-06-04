@@ -7,4 +7,6 @@ typeof(prompt); Тип данных.
 console.dir(Number); В консоли браузера покажет методы
 Math.
 
+object.keys(aaaa).length;  Подсчёт ключей массива верхнего уровня
+
 
