@@ -14,14 +14,16 @@ for(let i=0; i<2; i++){
     b = prompt('Оцените его из 10', "");
     
     if(a != null && b != null && a != "" && b != "" && a.length < 50 && b <= 10){
-        personalMoveDB.movies[a] = b;
+        personalMoveDB.count[a] = b;
         alert('УДАЧНО!');
     }else{
         alert('Ответ не правильный');
         i--;
-    }
+    };
 
-    
+    if(personalMoveDB.movies){
+        
+    }
 };
 
 console.log(personalMoveDB);

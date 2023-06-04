@@ -1,4 +1,5 @@
 // GIT //
+git init
 git status ----------------------------------------------------------- Проверить статус
 git config --global user.name "AlexStudio74" ------------------------- Указать пользователя для GIT
 git config --global user.email mrmahonin@yandex.ru ------------------- Указать EMAIL для GIT
