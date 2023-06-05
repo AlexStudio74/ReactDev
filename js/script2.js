@@ -1,14 +1,47 @@
 "use strict";
 
-//const arr = [1,2,3,6,8];
-////arr.pop();
-//arr.push(10);
-//console.log(arr);
+//let a =5, b = a;
 //
-//arr.forEach(function(item, i, arr){
-//    console.log(`${i}: ${item} в массиве ${arr}`);
-//});
+//const obj ={
+//    a: 5,
+//    b: 1
+//};
+//
+//const copy = obj;
+//
+//copy.a = 10;
+//
+//console.log(copy);
+//
+//console.log(obj);
 
-const str = prompt("", "");
-const products = str.split(",");
-console.log(products);
+function copy(mainObj) {
+    let objCopy = {};
+    let key;
+    for (key in mainObj){
+        objCopy[key] = mainObj[key];
+    }
+
+    return objCopy;
+}
+
+const numbers = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: {
+        f: 4,
+        g: 5,
+        h: {
+            arr: [5,5,5,5,5]
+        }
+    }
+}
+
+const newNumbers = copy(numbers);
+
+newNumbers.d.g = 7;
+
+console.log(numbers);
+
+console.log(newNumbers);
