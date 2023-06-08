@@ -47,7 +47,13 @@ const personalMoveDB = {
     },
     writeYourGenres: function(){
         for(let i=1; i<=3; i++){
-            personalMoveDB.genres[i-1] = prompt(`Ваш любимый жанр под номером ${i}`);
+            const mes = prompt(`Ваш любимый жанр под номером ${i}`);
+            if (mes==""||mes==null) {
+                console.log(`Произошла ошибка введите жанр под номером ${i} ещё раз`);
+                i--;
+            } else {
+                personalMoveDB.genres[i-1] = mes;
+            }
         }
     },
     toggleVisibleMyDB: function(){
@@ -56,7 +62,7 @@ const personalMoveDB = {
         }else{
             personalMoveDB.privat = true;
         }
-    },
+    }
     
 };
 
