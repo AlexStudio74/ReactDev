@@ -1,9 +1,11 @@
 "use strict";
 
 
-const num = 5;
+const box = document.getElementById('box'),
+      btn = document.getElementsByTagName('button'),
+      circles = document.getElementsByClassName('circles'),
+      hearts = document.querySelectorAll('.hearts'),
+      oneHeart = document.querySelector('.hearts');
 
-console.log("https://vk.com/catalog/" + num)
-
-
-const fontSize = 26 + 'px';
+box.style.backgroundColor = 'blue';
+box.style.width = 50+'px';
